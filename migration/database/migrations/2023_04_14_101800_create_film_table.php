@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('poster',50);
             $table->timestamps();
         });
-         Schema::table('films', function (Blueprint $table) {
+         Schema::table('film', function (Blueprint $table) {
             $table->foreign('genres_id')->references('id')->on('genres')->onDelete('cascade');
         });
     }
